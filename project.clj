@@ -1,4 +1,4 @@
-(defproject instaparse "1.4.7"
+(defproject colinhicks/instaparse "1.4.7-20170906"
   :description "Instaparse: No grammar left behind"
   :url "https://github.com/Engelberg/instaparse"
   :license {:name "Eclipse Public License"
@@ -7,6 +7,7 @@
   :profiles {:dev {:dependencies 
                    [[org.clojure/clojurescript "1.8.40"]
                     [org.clojure/tools.trace "0.7.5"]
+                    [org.clojure/tools.reader "1.0.5"]
                     [criterium "0.3.1"]
                     [rhizome "0.2.5"]]}
              :1.5 {:dependencies [[org.clojure/clojure "1.5.1"]]}
@@ -34,7 +35,7 @@
   :target-path "target"
   :scm {:name "git"
         :url "https://github.com/Engelberg/instaparse"}
-  :prep-tasks [["cljsee" "once"]]
+  ;;:prep-tasks [["cljsee" "once"]]
   :cljsbuild {:builds [{:id "none"
                         :source-paths ["src/"]
                         :compiler {:output-to "target/js/none.js"
